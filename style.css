@@ -6,6 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    padding-top: 100px; /* Espaço para o menu fixo */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -13,13 +14,13 @@ body {
    2. ESTRELAS DE PIXEL PISCANDO (FIXAS!)
    ======================================== */
 .estrelas {
-    position: fixed; /* Fica parado no fundo mesmo rolando a tela */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Não atrapalha cliques */
-    z-index: -1; /* Fica atrás de tudo */
+    pointer-events: none;
+    z-index: -1;
     overflow: hidden;
 }
 
@@ -32,7 +33,7 @@ body {
     animation: piscar 1.5s infinite alternate ease-in-out;
 }
 
-/* Posições e tempos diferentes para cada estrela */
+/* Posições das estrelas */
 .estrela:nth-child(1) { top: 5%; left: 3%; animation-delay: 0s; }
 .estrela:nth-child(2) { top: 12%; left: 18%; animation-delay: 0.3s; }
 .estrela:nth-child(3) { top: 8%; left: 35%; animation-delay: 0.6s; }
@@ -49,14 +50,50 @@ body {
 .estrela:nth-child(14) { top: 90%; left: 20%; animation-delay: 0.3s; }
 .estrela:nth-child(15) { top: 95%; left: 55%; animation-delay: 0.9s; }
 
-/* Animação que faz piscar */
 @keyframes piscar {
     0% { opacity: 0.2; transform: scale(0.8); }
     100% { opacity: 1; transform: scale(1.2); }
 }
 
 /* ========================================
-   3. TÍTULO PRINCIPAL
+   3. MENU DE NAVEGAÇÃO (FIXO NO TOPO)
+   ======================================== */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.botao-menu {
+    color: white;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.botao-menu:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    border-color: white;
+}
+
+/* ========================================
+   4. TÍTULO PRINCIPAL
    ======================================== */
 h1 {
     color: #ffe4e1;
@@ -65,10 +102,11 @@ h1 {
     font-family: 'UnifrakturMaguntia', 'Comic Sans MS', cursive;
     text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 40px #ff69b4;
     margin-bottom: 10px;
+    margin-top: 60px;
 }
 
 /* ========================================
-   4. SUBTÍTULOS (CATEGORIAS)
+   5. SUBTÍTULOS (CATEGORIAS)
    ======================================== */
 h2 {
     color: #ffe4e1;
@@ -82,10 +120,11 @@ h2 {
     display: inline-block;
     margin: 30px auto;
     border: 2px solid rgba(255, 105, 180, 0.2);
+    scroll-margin-top: 100px; /* Ajuste para o menu fixo */
 }
 
 /* ========================================
-   5. VÍDEOS
+   6. VÍDEOS
    ======================================== */
 iframe {
     display: block;
@@ -97,7 +136,6 @@ iframe {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito quando passa o mouse por cima do vídeo */
 iframe:hover {
     transform: scale(1.02);
     box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
