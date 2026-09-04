@@ -10,10 +10,10 @@ body {
 }
 
 /* ========================================
-   2. ESTRELAS DE PIXEL PISCANDO
+   2. ESTRELAS DE PIXEL PISCANDO (FIXAS!)
    ======================================== */
 .estrelas {
-    position: fixed; /* Fica parado no fundo */
+    position: fixed; /* Fica parado no fundo mesmo rolando a tela */
     top: 0;
     left: 0;
     width: 100%;
