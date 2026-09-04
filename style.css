@@ -1,23 +1,42 @@
-css
+/* FUNDO ESCURO COM GRADIENTE */
 body {
-    background-color: rgb(100, 84, 158);
+    background: linear-gradient(135deg, #0a0a0a, #1a0a2e, #2d1b4e);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* TÍTULO PRINCIPAL */
 h1 {
-    color: darkslateblue;
+    color: #ffe4e1;
     font-size: 75px;
-    text-align: center; /* Centraliza o título principal */
-    font-family: 'Arial Black', sans-serif; /* Deixa mais impactante */
-    text-shadow: 3px 3px 0px #ffb6c1; /* Sombra rosa pastel (toque fofo!) */
+    text-align: center;
+    font-family: 'UnifrakturMaguntia', 'Comic Sans MS', cursive;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493, 0 0 40px #ff69b4;
+    margin-bottom: 10px;
 }
 
+/* SUBTÍTULOS */
 h2 {
-    color: #ffe4e1; /* Rosa bem clarinho (fofo) */
+    color: #ffe4e1;
     font-size: 40px;
     text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte mais delicada */
-    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; /* Brilho neon rosa (moderno!) */
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo transparente escuro pra destacar */
-    padding: 10px; /* Dá um respiro ao redor do texto */
-    border-radius: 20px; /* Deixa as bordas arredondadas (fofo!) */
+    font-family: 'UnifrakturMaguntia', 'Comic Sans MS', cursive;
+    text-shadow: 0 0 10px #9370db, 0 0 20px #8a2be2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 30px auto;
+}
+
+/* VÍDEOS - arrumadinhos e com estilo */
+iframe {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+    border: 2px solid rgba(255, 105, 180, 0.2);
 }
