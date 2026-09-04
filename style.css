@@ -1,4 +1,11 @@
 /* ========================================
+   0. ROLAGEM SUAVE (efeito smooth)
+   ======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
    1. FUNDO ESCURO COM GRADIENTE
    ======================================== */
 body {
@@ -6,7 +13,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 20px;
-    padding-top: 100px; /* Espaço para o menu fixo */
+    padding-top: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -33,7 +40,6 @@ body {
     animation: piscar 1.5s infinite alternate ease-in-out;
 }
 
-/* Posições das estrelas */
 .estrela:nth-child(1) { top: 5%; left: 3%; animation-delay: 0s; }
 .estrela:nth-child(2) { top: 12%; left: 18%; animation-delay: 0.3s; }
 .estrela:nth-child(3) { top: 8%; left: 35%; animation-delay: 0.6s; }
@@ -93,7 +99,37 @@ body {
 }
 
 /* ========================================
-   4. TÍTULO PRINCIPAL
+   4. BOTÃO "VOLTAR AO TOPO"
+   ======================================== */
+.botao-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ff69b4, #8a2be2);
+    color: white;
+    font-size: 32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.botao-topo:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 50px rgba(255, 105, 180, 0.7);
+    border-color: white;
+}
+
+/* ========================================
+   5. TÍTULO PRINCIPAL
    ======================================== */
 h1 {
     color: #ffe4e1;
@@ -106,7 +142,7 @@ h1 {
 }
 
 /* ========================================
-   5. SUBTÍTULOS (CATEGORIAS)
+   6. SUBTÍTULOS (CATEGORIAS)
    ======================================== */
 h2 {
     color: #ffe4e1;
@@ -120,11 +156,11 @@ h2 {
     display: inline-block;
     margin: 30px auto;
     border: 2px solid rgba(255, 105, 180, 0.2);
-    scroll-margin-top: 100px; /* Ajuste para o menu fixo */
+    scroll-margin-top: 100px;
 }
 
 /* ========================================
-   6. VÍDEOS
+   7. VÍDEOS
    ======================================== */
 iframe {
     display: block;
