@@ -1,8 +1,23 @@
+css
 body {
     background-color: rgb(100, 84, 158);
 }
 
-h1 {color: darkslateblue;
+h1 {
+    color: darkslateblue;
     font-size: 75px;
-    
+    text-align: center; /* Centraliza o título principal */
+    font-family: 'Arial Black', sans-serif; /* Deixa mais impactante */
+    text-shadow: 3px 3px 0px #ffb6c1; /* Sombra rosa pastel (toque fofo!) */
+}
+
+h2 {
+    color: #ffe4e1; /* Rosa bem clarinho (fofo) */
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte mais delicada */
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493; /* Brilho neon rosa (moderno!) */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo transparente escuro pra destacar */
+    padding: 10px; /* Dá um respiro ao redor do texto */
+    border-radius: 20px; /* Deixa as bordas arredondadas (fofo!) */
 }
