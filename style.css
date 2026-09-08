@@ -1,5 +1,5 @@
 /* ========================================
-   0. ROLAGEM SUAVE (efeito smooth)
+   0. ROLAGEM SUAVE
    ======================================== */
 html {
     scroll-behavior: smooth;
@@ -18,7 +18,7 @@ body {
 }
 
 /* ========================================
-   2. ESTRELAS DE PIXEL PISCANDO (FIXAS!)
+   2. ESTRELAS DE PIXEL PISCANDO (FIXAS)
    ======================================== */
 .estrelas {
     position: fixed;
@@ -62,7 +62,7 @@ body {
 }
 
 /* ========================================
-   3. MENU DE NAVEGAÇÃO (FIXO NO TOPO)
+   3. MENU DE NAVEGAÇÃO
    ======================================== */
 .menu {
     position: fixed;
@@ -160,19 +160,27 @@ h2 {
 }
 
 /* ========================================
-   7. VÍDEOS
+   7. GRADE DE VÍDEOS (2x2) - NOVO!
    ======================================== */
-iframe {
-    display: block;
-    margin: 20px auto;
-    max-width: 90%;
+.grade-videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 20px; /* Espaço entre os vídeos */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.grade-videos iframe {
+    width: 100%;
+    aspect-ratio: 16/9; /* Mantém a proporção do vídeo */
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
     border: 2px solid rgba(255, 105, 180, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-iframe:hover {
+.grade-videos iframe:hover {
     transform: scale(1.02);
     box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
 }
