@@ -183,5 +183,16 @@ h2 {
 .grade-videos iframe:hover {
     transform: scale(1.02);
     box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
+
 }
 
+.rodape {
+    text-align: center;
+    color: #ffe4e1;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 2px solid rgba(255, 105, 180, 0.3);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 20px;
+}
