@@ -188,16 +188,17 @@ h2 {
 /* MIKU CHIBI BALANÇANDO NO TOPO */
 .miku-balanco {
     position: fixed;
-    top: 80px; /* Ajusta a altura (começa depois do menu) */
+    top: 80px; /* Ajusta a distância do topo (pode mudar) */
     left: 50%;
     transform: translateX(-50%);
-    width: 70px; /* Tamanho da imagem */
+    width: 80px; /* Aumentei um pouco para aparecer bem */
     z-index: 999;
     animation: balancar 3s infinite alternate ease-in-out;
-    filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.6)); /* Brilho azul */
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.8)); /* Brilho azul */
+    border-radius: 10px; /* Deixa as bordas levemente arredondadas (opcional) */
 }
 
-/* Animação de balanço (como um pêndulo) */
+/* Animação de balanço */
 @keyframes balancar {
     0% { transform: translateX(-50%) rotate(-12deg); }
     100% { transform: translateX(-50%) rotate(12deg); }
