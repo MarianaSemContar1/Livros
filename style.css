@@ -185,17 +185,23 @@ h2 {
     box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
 }
 
-/* MIKU CHIBI BALANÇANDO NO TOPO */
+/* MIKU CHIBI BALANÇANDO NO TOPO (SEM FUNDO BRANCO E ATRÁS DO TÍTULO) */
 .miku-balanco {
     position: fixed;
-    top: 80px; /* Ajusta a distância do topo (pode mudar) */
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px; /* Aumentei um pouco para aparecer bem */
-    z-index: 999;
+    width: 80px;
+    z-index: 1; /* AGORA FICA ATRÁS DO TÍTULO (que tem z-index maior) */
     animation: balancar 3s infinite alternate ease-in-out;
-    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.8)); /* Brilho azul */
-    border-radius: 10px; /* Deixa as bordas levemente arredondadas (opcional) */
+    filter: drop-shadow(0 0 15px rgba(0, 191, 255, 0.8));
+    border-radius: 10px;
+    mix-blend-mode: multiply; /* ESSA É A MÁGICA! TIRA O FUNDO BRANCO */
+}
+
+@keyframes balancar {
+    0% { transform: translateX(-50%) rotate(-12deg); }
+    100% { transform: translateX(-50%) rotate(12deg); }
 }
 
 /* Animação de balanço */
