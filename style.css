@@ -196,3 +196,88 @@ h2 {
     font-family: 'UnifrakturMaguntia', cursive;
     font-size: 20px;
 }
+
+/* ========================================
+   AJUSTES PARA TELAS PEQUENAS (CELULARES)
+   ======================================== */
+@media (max-width: 768px) {
+
+    /* 1. TÍTULO PRINCIPAL FICA MENOR */
+    h1 {
+        font-size: 40px;
+        margin-top: 100px; /* Dá espaço para a Miku */
+    }
+
+    /* 2. SUBTÍTULOS FICAM MENORES */
+    h2 {
+        font-size: 28px;
+        padding: 10px 20px;
+        display: block; /* Ocupa toda a largura */
+        margin: 20px 10px;
+    }
+
+    /* 3. MENU FICA EM COLUNA (UM BOTÃO EMBAIXO DO OUTRO) */
+    .menu {
+        flex-direction: column; /* Empilha os botões */
+        align-items: center;
+        padding: 10px 0;
+        gap: 8px;
+    }
+
+    .botao-menu {
+        font-size: 18px;
+        padding: 8px 20px;
+        width: 80%; /* Botões ocupam quase toda a largura */
+        text-align: center;
+    }
+
+    /* 4. VÍDEOS EM 1 COLUNA (EM VEZ DE 2) */
+    .grade-videos {
+        grid-template-columns: 1fr; /* UMA coluna no celular */
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .grade-videos iframe {
+        height: auto; /* Altura automática */
+        aspect-ratio: 16/9; /* Mantém a proporção */
+    }
+
+    /* 5. MIKU CHIBI FICA MENOR E MAIS PARA CIMA */
+    .miku-balanco {
+        width: 50px; /* Menor no celular */
+        top: 140px; /* Ajusta a posição */
+    }
+
+    /* 6. BOTÃO "VOLTAR AO TOPO" FICA MENOR */
+    .botao-topo {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* 7. RODAPÉ FICA MENOR (se você tiver um) */
+    .rodape {
+        font-size: 16px;
+        padding: 20px;
+    }
+}
+
+/* AJUSTE PARA CELULARES MUITO PEQUENOS (ATÉ 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+        margin-top: 120px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .botao-menu {
+        font-size: 16px;
+        padding: 6px 15px;
+    }
+}
