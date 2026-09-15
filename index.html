@@ -42,7 +42,6 @@
     <!-- ⬆️ BOTÃO "VOLTAR AO TOPO" -->
     <a href="#topo" class="botao-topo" title="Voltar ao topo">⬆</a>
 
-    
     <!-- CONTEÚDO DO SITE -->
     <h1 id="topo">🎵 Meu Site Musical 🎵</h1>
     
@@ -82,7 +81,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/r9AEGPB6qIU" title="LE SSERAFIM - Hot (Official MV)" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <!-- 🆕 CATEGORIA HATSUNE MIKU -->
+    <!-- CATEGORIA HATSUNE MIKU -->
     <h2 id="miku">🎤 Hatsune Miku</h2>
     <div class="grade-videos">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/3iUgKH8c7p4" title="NAKISO feat. Hatsune Miku - Retry Now" frameborder="0" allowfullscreen></iframe>
@@ -91,12 +90,37 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VFtJk-vgti4" title="Hatsune Miku - The Intense Voice of Hatsune Miku (Project DIVA PV)" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <footer class="rodape">
-    <p>🎵 Feito com muito 💙 pela Mariana | 2026</p>
-    <p>✨ Música é a poesia que toca a alma ✨</p>
-</footer>
+    <!-- 🎧 PLAYER DE MÚSICAS (OPCIONAL) -->
+    <section class="player-section">
+        <h2>🎧 Player da Mariana</h2>
+        
+        <!-- BOTÃO PARA ABRIR/FECHAR O PLAYER -->
+        <button id="abrir-player" class="botao-player">▶ Abrir Player</button>
 
- 
+        <!-- CONTEÚDO DO PLAYER (escondido por padrão) -->
+        <div id="player-conteudo" class="player-escondido">
+            
+            <!-- VÍDEO PRINCIPAL -->
+            <div class="video-principal">
+                <iframe id="video-player" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <!-- CONTROLES -->
+            <div class="controles-player">
+                <button id="btn-anterior" class="botao-controle">⏮ Anterior</button>
+                <button id="btn-aleatorio" class="botao-controle">🔀 Aleatório</button>
+                <button id="btn-proxima" class="botao-controle">Próxima ⏭</button>
+            </div>
+
+            <!-- LISTA DE MÚSICAS -->
+            <ul id="lista-musicas" class="lista-musicas">
+                <!-- As músicas vão aparecer aqui automaticamente pelo JavaScript -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- SCRIPT DO PLAYER -->
+    <script src="player.js"></script>
 
 </body>
 </html>
