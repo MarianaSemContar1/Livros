@@ -1,8 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+}
 
-/* ========================================
-   1. FUNDO ESCURO COM GRADIENTE
-   ======================================== */
 body {
     background: linear-gradient(135deg, #0a0a0a, #1a0a2e, #2d1b4e);
     min-height: 100vh;
@@ -12,9 +12,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ========================================
-   2. ESTRELAS DE PIXEL PISCANDO (FIXAS)
-   ======================================== */
 .estrelas {
     position: fixed;
     top: 0;
@@ -56,9 +53,6 @@ body {
     100% { opacity: 1; transform: scale(1.2); }
 }
 
-/* ========================================
-   3. MENU DE NAVEGAÇÃO
-   ======================================== */
 .menu {
     position: fixed;
     top: 0;
@@ -93,9 +87,6 @@ body {
     border-color: white;
 }
 
-/* ========================================
-   4. BOTÃO "VOLTAR AO TOPO"
-   ======================================== */
 .botao-topo {
     position: fixed;
     bottom: 30px;
@@ -123,9 +114,6 @@ body {
     border-color: white;
 }
 
-/* ========================================
-   5. TÍTULO PRINCIPAL
-   ======================================== */
 h1 {
     color: #ffe4e1;
     font-size: 75px;
@@ -136,9 +124,6 @@ h1 {
     margin-top: 60px;
 }
 
-/* ========================================
-   6. SUBTÍTULOS (CATEGORIAS)
-   ======================================== */
 h2 {
     color: #ffe4e1;
     font-size: 40px;
@@ -154,9 +139,6 @@ h2 {
     scroll-margin-top: 100px;
 }
 
-/* ========================================
-   7. GRADE DE VÍDEOS (2x2)
-   ======================================== */
 .grade-videos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -180,9 +162,6 @@ h2 {
     box-shadow: 0 0 50px rgba(255, 105, 180, 0.6);
 }
 
-/* ========================================
-   8. PLAYER DE MÚSICAS (OPCIONAL)
-   ======================================== */
 .player-section {
     max-width: 900px;
     margin: 60px auto 40px;
@@ -289,9 +268,6 @@ h2 {
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
 }
 
-/* ========================================
-   9. AJUSTES PARA CELULAR
-   ======================================== */
 @media (max-width: 768px) {
     h1 {
         font-size: 40px;
@@ -337,17 +313,17 @@ h2 {
         padding: 20px 15px;
         margin: 40px 10px 20px;
     }
-    
+
     .botao-player {
         font-size: 20px;
         padding: 12px 25px;
     }
-    
+
     .botao-controle {
         font-size: 14px;
         padding: 8px 12px;
     }
-    
+
     .lista-musicas li {
         font-size: 14px;
         padding: 10px 15px;
